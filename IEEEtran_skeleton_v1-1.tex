@@ -193,7 +193,7 @@ The “Enhancements for scheduled traffic” allows for the implementation of up
 Prioritization of data transmission is done on the egress port. A mechanism is needed to ensure that there is coordination between different data streams. A protection window is needed to ensure that high priority data has guaranteed access to the network at a specific instant in time. It can be created by allowing the transmission of a specific traffic class over a specific period of time. There are total 8 queues one for each traffic class to accommodate different traffic classes. Transmission is decided on the basis of algorithm known as Transmission Selection Algorithm(TSA). If the data from a particular queue is selected then the corresponding gate will be opened to transmit the data. Gate opening events are determined by gate control list. If there are fewer queues than eight, than data having multiple priorities can reside in a single queue. TSA decides in which order the data has to be transmitted from the queue. It has been shown in 
 Fig 1. The gate following can block the transmission even though TSA has decided before the next opening gate event. This implies that we can give higher priority than the highest priority traffic type. The transmission algorithm can be selected on the basis First in First Out(FIFO) or it can be credit-based shaper(CBS) or vendor specific algorithm. So it is up to the industry to define the gate control list and how gates are operated. Gates control list is not needed if there are no enhancements to be made for traffic scheduling.
 
-\begin{figure}[here]
+\begin{figure}
 \includegraphics[width=9cm]{pic/figure_01.png}
 \caption{Transmission Selection}
 \end{figure}
